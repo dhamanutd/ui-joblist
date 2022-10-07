@@ -128,7 +128,7 @@ const Recruitments = () => {
     dispatch(setParams({ field, value }));
   };
 
-  const getJobList = () => {
+  const getRecruitments = () => {
     const parameter = {
       description: params.description,
       location: params.location,
@@ -140,7 +140,7 @@ const Recruitments = () => {
   };
 
   useEffect(() => {
-    getJobList();
+    getRecruitments();
   }, [params.page]);
 
   return (
@@ -152,7 +152,7 @@ const Recruitments = () => {
               handleSetParams(field, value)
             }
             params={params}
-            search={() => getJobList()}
+            search={() => getRecruitments()}
           />
           <Card color="white">
             <div className={cx("p-2")}>

@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import TextInput from "../../components/TextInput";
 import cx from "classnames";
-import Button from "../../components/Button";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import TextInput from "../../components/TextInput";
+import Button from "../../components/Button";
+import { AUTH_KEY } from "../../constants/Cookies";
+import { setCookies } from "../../utils/cookies";
 
 import { resolveLogin, setParams } from "../../reducers/Auth/actions";
 import type { RootState, AppDispatch } from "../../store";
-import { AUTH_KEY } from "../../constants/Cookies";
-import { setCookies } from "../../utils/cookies";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
@@ -35,6 +35,7 @@ const Login: React.FC = () => {
     setCookies(AUTH_KEY, token?.access_token);
     navigate("/p/recruitments");
   };
+
   useEffect(() => {
     if (token?.access_token) {
       handleSetAuth();
