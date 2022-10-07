@@ -36,7 +36,7 @@ const Recruitment = () => {
         <div className={cx("p-4")}>
           <div
             className={cx("my-2 font-bold text-primary text-lg cursor-pointer")}
-            onClick={() => navigate("/p/jobs")}
+            onClick={() => navigate("/p/recruitments")}
           >
             Back
           </div>

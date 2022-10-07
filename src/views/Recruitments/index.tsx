@@ -30,7 +30,7 @@ const Item = ({ data }: { data: IRecruitmentDetailType }) => {
       <div className={cx("flex flex-col")}>
         <div
           className={cx("font-bold text-primary cursor-pointer")}
-          onClick={() => navigate(`/p/job/${data.id}`)}
+          onClick={() => navigate(`/p/recruitment/${data.id}`)}
         >
           {data.title}
         </div>

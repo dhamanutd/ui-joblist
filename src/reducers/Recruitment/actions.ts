@@ -6,7 +6,7 @@ import {
 import { initialState, IRecruitmentDetailType } from "./constants";
 
 export const resolveGetRecruitments = createAsyncThunk(
-  "resolve/jobs",
+  "resolve/recruitments",
   async (
     payload: {
       description: string;
@@ -32,7 +32,7 @@ export const resolveGetRecruitments = createAsyncThunk(
 );
 
 export const resolveGetRecruitment = createAsyncThunk(
-  "resolve/job",
+  "resolve/recruitment",
   async (
     payload: {
       id: string;

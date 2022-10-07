@@ -33,7 +33,7 @@ const Login: React.FC = () => {
 
   const handleSetAuth = async () => {
     setCookies(AUTH_KEY, token?.access_token);
-    navigate("/p/jobs");
+    navigate("/p/recruitments");
   };
   useEffect(() => {
     if (token?.access_token) {
@@ -48,13 +48,19 @@ const Login: React.FC = () => {
       )}
     >
       <div className={cx("sm:mx-auto sm:w-full sm:max-w-md")}>
-        <h2
-          className={cx(
-            "mt-6 text-center text-3xl font-bold tracking-tight text-white"
-          )}
-        >
-          Login to your account
-        </h2>
+        <div className={cx("flex")}>
+          <h2
+            className={cx(
+              "text-center text-3xl font-normal tracking-tight text-white"
+            )}
+          >
+            Login to
+          </h2>
+          <div className={cx("text-3xl font-extrabold text-white mr-1")}>
+            Github
+          </div>
+          <div className={cx("text-3xl font-normal text-white")}>Jobs</div>
+        </div>
       </div>
 
       <div className={cx("mt-8 sm:mx-auto sm:w-full sm:max-w-md")}>
