@@ -4,7 +4,7 @@ import { parseQueries } from "../../utils/parseQueries";
 export const getRecruitments = async (
   queries: Map<string, string | number | boolean>
 ) => {
-  const q = parseQueries(queries);
+  const q = parseQueries(Object.fromEntries(queries));
   try {
     return await Axios.get(`/recruitment/positions${q}`);
   } catch (error: any) {
